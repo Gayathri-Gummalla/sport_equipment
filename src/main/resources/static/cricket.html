@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Equipment Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: url("./images/crick-back.jpg") no-repeat center center fixed;
+            background-size: cover;
+        }
+        header {
+            background:#516ae9; /* transparent dark overlay */
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.85); /* semi-transparent white box */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #1565c0;
+            margin-bottom: 10px;
+        }
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .equipment-card {
+            background: rgba(249, 249, 249, 0.9);
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .equipment-card img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+        }
+        .equipment-name {
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+        .availability {
+            margin-bottom: 10px;
+            color: #516ae9;
+        }
+        .book-btn {
+            background: #516ae9;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .book-btn:hover {
+            background: #516ae9;;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #1565c0;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cricket Equipment Booking</h1>
+    </header>
+
+    <main>
+        <h2>Available Cricket Gear</h2>
+        <div class="equipment-grid">
+
+            <div class="equipment-card">
+                <img src="./images/bats.jpg" alt="Bat">
+                <div class="equipment-name">Cricket Bat</div>
+                <div class="availability">Available: 7</div>
+                <a href="book.html" class="book-btn">Book Now</a>
+            </div>
+
+            <div class="equipment-card">
+                <img src="./images/balls.jpg" alt="Ball">
+                <div class="equipment-name">Leather Cricket Ball</div>
+                <div class="availability">Available: 6</div>
+                <a href="book.html" class="book-btn">Book Now</a>
+            </div>
+
+            <div class="equipment-card">
+                <img src="./images/pads.jpg" alt="Pads">
+                <div class="equipment-name">Batting Pads</div>
+                <div class="availability">Available: 7</div>
+                <a href="book.html" class="book-btn">Book Now</a>
+            </div>
+
+            <div class="equipment-card">
+                <img src="./images/gloves.jpg" alt="Gloves">
+                <div class="equipment-name">Batting Gloves</div>
+                <div class="availability">Available: 9</div>
+                <a href="book.html" class="book-btn">Book Now</a>
+            </div>
+
+            <div class="equipment-card">
+                <img src="./images/helmet.jpg" alt="Helmet">
+                <div class="equipment-name">Cricket Helmet</div>
+                <div class="availability">Available: 7</div>
+                <a href="book.html" class="book-btn">Book Now</a>
+            </div>
+
+        </div>
+
+        <a href="booking.html" class="back-link">← Back to Equipment List</a>
+    </main>
+
+</body>
+</html>

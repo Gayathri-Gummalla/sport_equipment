@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Make sure ground.jpg is in the same folder */
+            background: url('images/ground.jpg') no-repeat center center/cover;
+
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 60px;
+            width: 800px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .container h2 {
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        form .form-group {
+            width: 48%;
+        }
+
+        form input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        form input:focus {
+            border-color: #6a11cb;
+            box-shadow: 0 0 5px rgba(106,17,203,0.5);
+        }
+
+        form button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: #6a11cb;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 15px;
+        }
+
+        form button:hover {
+            background: #2575fc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Booking Form</h2>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="bookname">Name</label>
+                <input type="text" id="bookname" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bookemail">Email</label>
+                <input type="email" id="bookemail" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bookpass">Register Number</label>
+                <input type="password" id="bookpass" placeholder="Enter your register number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bookday">Date</label>
+                <input type="date" id="bookday" required>
+            </div>
+
+            <div class="form-group">
+                <label for="booktime_start">Start Time</label>
+                <input type="time" id="booktime_start" required>
+            </div>
+
+            <div class="form-group">
+                <label for="booktime_end">Return Time</label>
+                <input type="time" id="booktime_end" required>
+            </div>
+
+            <button type="submit">Book</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("bookingForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // stop normal form submission
+            alert("✅ Your booking is completed!");
+            window.location.href = "./booksuccess.html"; // redirect to success page
+        });
+    </script>
+</body>
+</html>

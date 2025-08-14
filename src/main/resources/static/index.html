@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Athlete Cart</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      padding-top: 120px; /* total height of both navbars */
+    }
+
+    .navbar-top {
+      background-color: #007bff;
+      color: white;
+      padding: 0.6rem 1.5rem;
+    }
+
+    .navbar-top .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-top .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .navbar-top .logo span {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .navbar-top .login-btn {
+      background-color: #081655;
+      color: #fff;
+      font-weight: bold;
+      padding: 0.4rem 1rem;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .navbar-top .login-btn:hover {
+      background-color: #6c6456;
+      color: white;
+    }
+
+    .navbar-bottom {
+      background-color: #1abc9c;
+      padding: 0.3rem 1rem;
+    }
+
+    .navbar-bottom .navbar-nav {
+      flex-wrap: nowrap;
+    }
+
+    .navbar-bottom .nav-link {
+      color: #fff;
+      font-weight: bold;
+      margin-left: 1.5rem;
+      font-size: 0.95rem;
+      transition: 0.3s;
+      white-space: nowrap;
+    }
+
+    .navbar-bottom .nav-link:hover {
+      color: #f1c40f;
+      text-decoration: underline;
+    }
+
+    .hero-section {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
+    }
+
+    .scrolling-background {
+      display: flex;
+      width: 200vw;
+      height: 100%;
+      animation: scrollImages 10s linear infinite;
+    }
+
+    .scrolling-background img {
+      width: 100vw;
+      height: 100%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    @keyframes scrollImages {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(-100vw); }
+      100% { transform: translateX(0); }
+    }
+
+    .fixed-overlay {
+      position: absolute;
+      top: 50%; 
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      text-align: center;
+      color: white;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 90%;
+    }
+
+    .fixed-overlay h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .fixed-overlay p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    #contact {
+      color: black;
+      background-color: #f8f9fa;
+    }
+
+    footer {
+      background-color: #1f2937;
+      color: #fff;
+      padding: 40px 0;
+      font-family: Arial, sans-serif;
+    }
+
+    footer a {
+      color: #9ca3af;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<!-- First Navbar -->
+<nav class="navbar navbar-top fixed-top d-flex justify-content-between">
+  <div class="logo">
+    <img src="./images/logo.png" alt="Logo" />
+    <span>Athlete Cart</span>
+  </div>
+  <a href="./login.html" class="login-btn">Login</a>
+</nav>
+
+<!-- Second Navbar -->
+<nav class="navbar navbar-bottom fixed-top" style="top: 56px;">
+  <div class="container-fluid d-flex justify-content-end">
+    <div class="navbar-nav flex-row">
+      <a class="nav-link" href="#home">Home</a>
+      <a class="nav-link" href="#booking">Book Equipment</a>
+      <a class="nav-link" href="#contact">Contact</a>
+      <a class="nav-link" href="./adminlogin.html">Admin</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+  <div class="scrolling-background">
+    <img src="./images/home.jpg" alt="Home Image 1" />
+    <img src="./images/plays.jpg" alt="Play Image" />
+  </div>
+  <div class="fixed-overlay">
+    <h1>Athlete Cart</h1>
+    <p>Reserve your favorite sports gear with ease — anytime, anywhere.</p>
+    <!-- Removed Book Now button -->
+  </div>
+</section>
+
+<!-- Booking Section -->
+<section id="booking" class="section bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4">Book Your Equipment</h2>
+    <p class="mb-5">Choose from a wide range of sports gear and reserve it for your next game.</p>
+    <a href="./booking.html" class="btn btn-primary btn-lg">Go to Booking Page</a>
+  </div>
+</section>
+
+<!-- Footer (Contact Section) -->
+<footer id="contact" style="background-color: #1f2937; color: #fff; padding: 40px 0;">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Left Side - Contact details -->
+      <div class="col-md-6">
+        <h5>Contact Details</h5>
+        <p>Email: sportsportal@example.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Address: Sports Complex, Your City</p>
+      </div>
+
+      <!-- Right Side - Links & Socials -->
+      <div class="col-md-6 text-md-end text-center">
+        <p style="margin:0;">&copy; 2025 AthleticArt. All rights reserved.</p>
+        <p style="margin:0;">
+          <a href="/home.html" style="color:#9ca3af;">Home</a> |
+          <a href="/about.html" style="color:#9ca3af;">About</a> |
+          <a href="/contact.html" style="color:#9ca3af;">Contact</a>
+        </p>
+        <p style="margin:0; margin-top:5px;">
+          Follow us:
+          <a href="#" style="color:#9ca3af;">Facebook</a> |
+          <a href="#" style="color:#9ca3af;">Twitter</a> |
+          <a href="#" style="color:#9ca3af;">Instagram</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</footer>
